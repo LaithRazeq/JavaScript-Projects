@@ -3,6 +3,7 @@ const card = document.querySelector('.card');
 const details = document.querySelector('.details');
 const time = document.querySelector('img.time');
 const icon = document.querySelector('.icon img');
+const forecast = new Forecast();
 
 const updateUI = (data) => {
 
@@ -42,17 +43,18 @@ const updateUI = (data) => {
     }
 };
 
-const updateCity = async (city) => {
-    const cityDets = await getCity(city);
-    const weather = await getWeather(cityDets.Key);
+// const updateCity = async (city) => {
+    // const cityDets = await getCity(city);
+    // const weather = await getWeather(cityDets.Key);
 
     // return {
     //     cityDets: cityDets,
     //     weather: weather
     // };
     // We can use object short hand model bc key name is same as value name -->
-    return { cityDets, weather };
-};
+    
+    // return { cityDets, weather };
+// };
 
 cityForm.addEventListener('submit', e => {
     // prevent default action (refresh page)
@@ -63,7 +65,17 @@ cityForm.addEventListener('submit', e => {
     cityForm.reset();
 
     // update UI with new city
-    updateCity(city)
+    forecast.updateCity(city)
         .then(data => updateUI(data))
         .catch(err => console.log(err.message));
+
+    // Setting the local storage to the last city viewed
+    localStorage.setItem('city', city);
 });
+
+// Setting a default city value = to the last city stored in local storage
+if (localStorage.getItem('city')) {
+    forecast.updateCity(localStorage.getItem('city')) //This returns a promise, so we use .then to get actual data
+        .then(data => updateUI(data))
+        .catch(err => console.log(err));
+}
