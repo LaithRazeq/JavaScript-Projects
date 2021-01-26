@@ -1,0 +1,46 @@
+h1{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:rgb(82, 82, 235);
+    font-size: 40px;
+    }
+.container{
+    max-width: 600px;
+  }
+  .btn{
+    background: #3cc7ad;
+    color: snow;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  .btn:focus{
+    outline: none !important;
+  }
+  .mystyle{
+      font-size: 28px;
+      font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      color: rgb(223, 72, 160);
+  }
+  body{
+    background-color:rgba(227, 232, 236, 0.911)
+  }
+  .input-group-text{
+      background-color: #3cc7ad;
+      color: snow;
+  }
+  .username{
+    font-weight: bold;
+  }
+  .time{
+    font-size: 0.7em;
+    color: #999;
+  }
+  .update-mssg{
+    text-align: center;
+    margin: 20px auto;
+    color: rgb(223, 72, 160);
+  }
+  .clr{
+    background-color: crimson !important;
+    margin: auto 220px;
+    text-align: center;
+  }
