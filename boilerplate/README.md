@@ -7,6 +7,8 @@ The steps are:
 3) To start the web server, run "npm run serve"
 4) For final step before production, run "npm run build"
 
+*) make sure that you import any JS scripts or CSS scripts from the scripts folder into index.js 
+
 For all commands for terminal, check the pacakge.json scripts area
 
 Happy Coding!!!!
