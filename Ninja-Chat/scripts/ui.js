@@ -8,7 +8,7 @@ class ChatUI {
     clear() {
         this.list.innerHTML = '';
     }
-    render(data) {
+    render(data, id) {
         const when = dateFns.distanceInWordsToNow(
             data.created_at.toDate(),
             { addSuffix: true }

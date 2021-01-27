@@ -4,7 +4,7 @@ const newChatForm = document.querySelector('.new-chat');
 const newNameForm = document.querySelector('.new-name');
 const updateMssg = document.querySelector('.update-mssg');
 const rooms = document.querySelector('.chat-rooms');
-const clr = document.querySelector('.clr');
+
 
 // Adding a new Chat using the form submit
 newChatForm.addEventListener('submit', e => {
@@ -37,7 +37,6 @@ rooms.addEventListener('click', e => {
     }
 });
 
-// Clearing Chat from a room
 
 // Check local storage for a name
 const username = localStorage.username ? localStorage.username : 'Anonymous'; 
